@@ -41,3 +41,5 @@ function exampleA() {
 }
 
 exampleA(1, 'string', true); //[Arguments] { '0': 1, '1': 'string', '2': true }
+
+// arguments는 실제 배열이 아니기 때문에 배열과 관련된 메서드를 쓸 수 업다
