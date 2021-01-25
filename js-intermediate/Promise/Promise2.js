@@ -41,3 +41,5 @@ const fetchNumber = new Promise((resolve, reject) => {
 // fetchNumber.then((num) => num * 2).then((num) => num * 3).then(new => )
 
 // 4. error handling
+
+// resolve()에 인자값으로 넣어주는 데이터가 비동기 통신이 정상적으로 완료되면 .then으로 실행했을 때 사용할 수 있는 value임
