@@ -32,10 +32,10 @@ function pickallFruits() {
   );
 }
 
-pickallFruits().then(console.log);
+pickallFruits().then(console.log(value));
 
 function pickOnlyOne() {
   return Promise.race([getApple(), getBanana()]);
 }
 
-pickOnlyOne().then(console.log);
+pickOnlyOne().then(console.log(value));

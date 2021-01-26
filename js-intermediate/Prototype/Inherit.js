@@ -1,6 +1,7 @@
 // js에서 부모 객체는 자식 객체의 프로토 타입이다.
 // 즉, 상속하는 부모가 프로토 타입이다.
 
+// 객체안에 method 정의 가능
 const car = {
   wheels: 4,
   navigation: 2,
@@ -28,10 +29,9 @@ benz.__proto__ = car;
 audi.__proto__ = car;
 
 console.log(bmw); // bmw의 맴버만 출력
+// bmw에서 wheels를 찾고, 없으면 바로 위의 proto인 car에서 wheels를 찾음
 console.log(bmw.wheels); // 부모인 car를 상속받아서 4 출력 가능
 console.log(bmw.__proto__.navigation); // 부모의 navigation인 2를 출력
-
-// bmw에서 wheels를 찾고, 없으면 바로 위의 proto인 car에서 wheels를 찾음
 
 // 상속은 계속 이어 질 수 있다.
 const x5 = {
@@ -42,7 +42,7 @@ const x5 = {
 x5.__proto__ = bmw;
 
 console.log(x5); // x5의 맴버만 출력
-console.log(x5.navigation); // 1출력 (bmw에서 찾음)
+console.log(x5.navigation); // 1출력 (가장 가까운 proto인 bmw에서 찾음)
 
 // 출력 결과는 상속한 proto의 property까지 출력
 for (p in x5) {

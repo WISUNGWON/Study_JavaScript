@@ -22,6 +22,8 @@ async function pickFruits() {
     return `${apple} + ${banana}`;
   } catch (e) {
     console.log(e);
+  } finally {
+    // code..
   }
 }
 
